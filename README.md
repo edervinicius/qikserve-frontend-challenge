@@ -1,1 +1,0 @@
-# qikserve-frontend-challenge

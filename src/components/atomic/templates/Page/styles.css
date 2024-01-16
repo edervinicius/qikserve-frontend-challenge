@@ -1,0 +1,12 @@
+.page {
+  .content {
+    border-top: #fff solid 5px;
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      .searchArea {
+        padding: 4px 0;
+      }
+    }
+  }
+}

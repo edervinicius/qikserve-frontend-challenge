@@ -1,7 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import {apiService} from "../../services/";
-import { RootState } from "../@types";
-
+import {getVenueData} from "../../services/";
 export interface IVenueState {
   id?: number;
   name?: string,
@@ -17,32 +15,41 @@ export interface IVenueState {
   postcode?: string,
   country?: string,
   timezoneOffset?: string,
-  locale?: string,
+  locale: string,
   timeZone?: string,
   webSettings: {
-    id?: number,
-    venueId?: number,
-    bannerImage?: string,
-    backgroundColour?: string,
-    primaryColour?: string,
-    primaryColourHover?: string,
-    navBackgroundColour?: string
+    id: number,
+    venueId: number,
+    bannerImage: string,
+    backgroundColour: string,
+    primaryColour: string,
+    primaryColourHover: string,
+    navBackgroundColour: string
   },
-  ccy?: string,
-  ccySymbol?: string,
-  currency?: string
+  ccy: string,
+  ccySymbol: string,
+  currency: string
 }
 
 const initialState: IVenueState = {
+  locale:"pt-BR",
+  ccy: '',
+  ccySymbol: '',
+  currency: '',
   webSettings:{
-    
+    id:0,
+    venueId:0,
+    backgroundColour:"",
+    bannerImage:"",
+    navBackgroundColour:"",
+    primaryColour:"",
+    primaryColourHover:"",
   }
 };
 
 export const fetchVenueConfig = (): any => async (dispatch: any) => {
   try {
-    const response = await apiService.get("/venue/9");
-    const data = response.data;
+    const data = await getVenueData();
     dispatch(setVenueConfig(data));
   } catch (error) {
     console.log("Error fetch venue data", error);
@@ -60,5 +67,3 @@ const venueSlice = createSlice({
 export const { setVenueConfig } = venueSlice.actions;
 
 export default venueSlice.reducer;
-
-export const selectFunds = (state: RootState) => state.venue.name;

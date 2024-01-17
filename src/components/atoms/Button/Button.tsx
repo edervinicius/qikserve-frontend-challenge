@@ -1,21 +1,26 @@
 import React, { ButtonHTMLAttributes, ReactNode } from "react";
-import { useTheme } from "../../../hooks/theme";
 import { StyledButton } from "./styles";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   width?: "normal" | "fullwidth";
   onClick?: () => void;
+  primaryColour: string;
+  primaryColourHover: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, onClick, width }) => {
-  const theme = useTheme();
-
+const Button: React.FC<ButtonProps> = ({
+  children,
+  onClick,
+  width,
+  primaryColour,
+  primaryColourHover,
+}) => {
   return (
     <StyledButton
       className={width}
-      $primaryColour={theme.primaryColour}
-      $primaryColourHover={theme.primaryColourHover}
+      $primaryColour={primaryColour}
+      $primaryColourHover={primaryColourHover}
       onClick={onClick}
     >
       {children}

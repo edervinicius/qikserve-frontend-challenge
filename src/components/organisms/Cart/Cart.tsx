@@ -134,6 +134,8 @@ const Cart: React.FC = () => {
             </div>
             <div className="checkout">
               <Button
+                primaryColour={theme.primaryColour}
+                primaryColourHover={theme.primaryColourHover}
                 children={intl.formatMessage({
                   id: "components.cart.button",
                 })}

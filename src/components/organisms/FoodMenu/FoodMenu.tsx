@@ -61,6 +61,7 @@ const FoodMenu: React.FC<FoodMenuProps> = ({ sections }) => {
         <div className="categories">
           {sections.map((section) => (
             <div
+              key={section.id}
               className={`category ${
                 selectedCategory === section.id ? "selected" : ""
               }`}

@@ -11,6 +11,8 @@ test("renders button and test props and styles", () => {
       onClick={() => {
         clicked = true;
       }}
+      primaryColour="#000"
+      primaryColourHover="#000"
     >
       {buttonChildren}
     </Button>

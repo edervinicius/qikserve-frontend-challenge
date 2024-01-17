@@ -201,6 +201,8 @@ const Modal: React.FC<ModalProps> = ({ item, handleCloseModal }) => {
               </div>
             </div>
             <Button
+              primaryColour={theme.primaryColour}
+              primaryColourHover={theme.primaryColourHover}
               onClick={handleAddToCart}
               children={
                 <>

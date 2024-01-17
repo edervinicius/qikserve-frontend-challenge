@@ -169,6 +169,8 @@ const Cartmobile: React.FC = () => {
                 })}
                 width="fullwidth"
                 onClick={handleCheckout}
+                primaryColour={theme.primaryColour}
+                primaryColourHover={theme.primaryColourHover}
               />
             </div>
           </div>
@@ -176,6 +178,8 @@ const Cartmobile: React.FC = () => {
       )}
       <StyledBasket>
         <Button
+          primaryColour={theme.primaryColour}
+          primaryColourHover={theme.primaryColourHover}
           children={
             <>
               {intl.formatMessage(

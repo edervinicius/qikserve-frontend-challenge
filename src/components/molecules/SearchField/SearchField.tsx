@@ -15,10 +15,16 @@ const SearchField: React.FC<SearchFieldProps> = ({ handleFilterSections }) => {
   const storeData = useSelector((state: RootState) => state);
 
   const handleFilter = (text: string) => {
-    if (text.trim().length === 0) return false;
-    const filtered = storeData.menu.sections!.filter((section) =>
-      section.items.filter((item) => item.name.includes(text))
-    );
+    if (text.trim().length === 0) {
+      handleFilterSections(storeData.menu.sections!);
+      return false;
+    }
+    const filtered = storeData.menu.sections!.filter((section) => {
+      const fill = section.items.some((item) =>
+        item.name.toLocaleLowerCase().includes(text.toLocaleLowerCase())
+      );
+      return fill;
+    });
     handleFilterSections(filtered);
   };
 

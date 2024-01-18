@@ -23,6 +23,10 @@ The provided endpoint was unstable due to the usage limit, sometimes it was out 
 5. `npm start`
 6. Open your browser at http://localhost:3000
 
+These are the endpoints provided for the test:
+Restaurant: https://frontend-challenge.free.beeceptor.com/venue/9
+Menu: https://frontend-challenge.free.beeceptor.com/menu
+
 ## Running test
 
 I created some component example tests, to run run the command:

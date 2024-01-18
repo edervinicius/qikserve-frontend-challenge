@@ -1,6 +1,8 @@
 # QikServe
 
-This repository contains my test project proposed to evaluate the frontend challenge
+This repository contains my test project proposed to evaluate the frontend challenge.
+
+The demo can be seen at this link:The https://qikserve-frontend-challenge.vercel.app/
 
 ## Technologies used
 

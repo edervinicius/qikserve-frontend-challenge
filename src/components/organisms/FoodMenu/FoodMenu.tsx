@@ -65,6 +65,7 @@ const FoodMenu: React.FC<FoodMenuProps> = ({ sections }) => {
               className={`category ${
                 selectedCategory === section.id ? "selected" : ""
               }`}
+              data-cy="category"
               onClick={() => handleSelectCategory(section.id)}
             >
               {section?.images && (
@@ -87,6 +88,7 @@ const FoodMenu: React.FC<FoodMenuProps> = ({ sections }) => {
                   className={`itemsGroup ${
                     openedCategory.includes(section.id) ? "opened" : "closed"
                   }`}
+                  data-cy="menu"
                 >
                   <div
                     className="itemHeader"

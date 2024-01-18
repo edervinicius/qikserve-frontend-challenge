@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    // "sourceType": "module",
+    "types": [
+      "node",
+      "cypress",
+      // "cypress-react-selector",
+      "cypress-file-upload"
+    ],
+    "resolveJsonModule": true
+  }
+}

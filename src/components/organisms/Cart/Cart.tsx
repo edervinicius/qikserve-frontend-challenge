@@ -132,7 +132,7 @@ const Cart: React.FC = () => {
                 <Currency value={storeData.cart.total} />
               </h4>
             </div>
-            <div className="checkout">
+            <div className="checkout" data-cy="checkout">
               <Button
                 primaryColour={theme.primaryColour}
                 primaryColourHover={theme.primaryColourHover}

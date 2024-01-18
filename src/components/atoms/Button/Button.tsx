@@ -18,6 +18,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <StyledButton
+      data-cy="button"
       className={width}
       $primaryColour={primaryColour}
       $primaryColourHover={primaryColourHover}

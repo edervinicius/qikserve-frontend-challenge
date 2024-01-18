@@ -6,7 +6,7 @@ export const Main = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  @media (max-width: 768px) {    
+  @media (max-width: 800px) {    
     background: #fff;
     padding: 0;
     flex-direction: column;

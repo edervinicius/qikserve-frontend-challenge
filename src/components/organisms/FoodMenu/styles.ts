@@ -181,7 +181,7 @@ box-shadow: 0px 2px 14px 0px rgba(0, 0, 0, 0.14);
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     box-shadow: none
   }
 `

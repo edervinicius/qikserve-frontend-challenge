@@ -49,6 +49,7 @@ const Cartmobile: React.FC = () => {
       subtotal: 0,
     };
     dispatch(dispatchCartUpdate(data));
+    handleToggleCart();
   };
 
   const handleRemoveItem = (itemIndex: number) => {
@@ -162,7 +163,7 @@ const Cartmobile: React.FC = () => {
                 </div>
               )}
             </div>
-            <div className="checkout">
+            <div className="checkout" data-cy="checkout">
               <Button
                 children={intl.formatMessage({
                   id: "components.cart.button",
@@ -176,7 +177,7 @@ const Cartmobile: React.FC = () => {
           </div>
         </StyledCart>
       )}
-      <StyledBasket>
+      <StyledBasket data-cy="basket">
         <Button
           primaryColour={theme.primaryColour}
           primaryColourHover={theme.primaryColourHover}

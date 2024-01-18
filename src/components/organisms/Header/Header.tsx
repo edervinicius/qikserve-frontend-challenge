@@ -1,12 +1,12 @@
-import { isMobile } from "react-device-detect";
 import { useIntl } from "react-intl";
 import { StyledHeader } from "./styles";
-import { useTheme } from "../../../hooks";
+import { useTheme, useScreenResolution } from "../../../hooks";
 import { MenuIcon } from "../../../components";
 
 function Header() {
   const intl = useIntl();
   const { navBackgroundColour, bannerImage } = useTheme();
+  const { isMobile } = useScreenResolution();
 
   return (
     <StyledHeader

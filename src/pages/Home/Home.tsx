@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../reduxStore/@types";
+import { useScreenResolution } from "../../hooks";
 import {
   fetchMenuConfig,
   IMenuSection,
@@ -20,6 +20,7 @@ function Home() {
   const dispatch = useDispatch();
   const storeData = useSelector((state: RootState) => state);
 
+  const { isMobile } = useScreenResolution();
   const [sections, setSections] = useState(storeData.menu.sections);
 
   const handleFilterSections = (filtered: Array<IMenuSection>) => {

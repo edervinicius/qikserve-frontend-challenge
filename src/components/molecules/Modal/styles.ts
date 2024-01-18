@@ -16,12 +16,12 @@ export const StyledModal = styled.div`
         bottom: 0;
         background: rgba(0, 0, 0, 0.65);
         z-index: 9998;
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             display: none;
         }
     }
     .modal {
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             height: 100vh;
             display: flex;
             flex-direction: column;

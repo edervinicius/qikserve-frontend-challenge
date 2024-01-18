@@ -14,7 +14,7 @@ I directly used CRA, I could have used some Vite, Webpack, Parcel, etc, but I wo
 
 ## Running local
 
-The provided endpoint was unstable due to the usage limit, sometimes it was out of operation, so in the .env setting to "dev" mode the system uses json data locally
+The provided endpoint was unstable due to the usage limit, sometimes it was out of operation, so in the .env setting to "dev" mode the system uses json data locally. I used currency and interface internationalization, based on the configuration that comes from the venue endpoint.
 
 1. Add a .env file following the model proposed in .env.example
 2. Fill in the .env with the "dev" or "prod" mode

@@ -146,10 +146,11 @@ const Modal: React.FC<ModalProps> = ({ item, handleCloseModal }) => {
                       )}
                     </p>
                   </div>
-                  <div className="items">
+                  <div className="items" data-cy="modifiers">
                     {modifier.items.map((item) => {
                       return (
                         <div
+                          data-cy="modifier"
                           className="item"
                           onClick={() => handleAddModifier(item)}
                         >
@@ -179,7 +180,7 @@ const Modal: React.FC<ModalProps> = ({ item, handleCloseModal }) => {
           </div>
         )}
         {showAddToCartButton && (
-          <div className="addToCart">
+          <div className="addToCart" data-cy="addToCart">
             <div className="qtyWrapper">
               <div
                 className={`button ${totalItems === 1 ? "disabled" : ""}`}

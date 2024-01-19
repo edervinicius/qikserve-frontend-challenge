@@ -29,8 +29,22 @@ These are the endpoints provided for the test: Restaurant(https://frontend-chall
 
 ## Running test
 
+### Unit Test
+
 I created some component example tests, to run run the command:
+
 `npm test`
+
+### E2E Test
+
+I used Cypress for the test, you can see it in action in this video:
+
+https://youtu.be/RSTJdYsB9jQ
+
+1. Run the project `npm start`
+2. Open a new terminal
+3. `npm run e2e-test`
+4. `npm run e2e-open`
 
 ### Requirements
 
